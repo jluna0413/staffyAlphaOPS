@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Isfullfilled:</strong>
+  <%= @booking.isfullfilled %>
+</p>
+
+<p>
+  <strong>Job:</strong>
+  <%= @booking.job %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

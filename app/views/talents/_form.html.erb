@@ -1,0 +1,117 @@
+<%= form_with(model: talent, local: true) do |form| %>
+  <% if talent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(talent.errors.count, "error") %> prohibited this talent from being saved:</h2>
+
+      <ul>
+      <% talent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :username %>
+    <%= form.text_field :username, id: :talent_username %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :talent_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :middle_name %>
+    <%= form.text_field :middle_name, id: :talent_middle_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :talent_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :biography %>
+    <%= form.text_area :biography, id: :talent_biography %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, id: :talent_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :talent_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address2 %>
+    <%= form.text_field :address2, id: :talent_address2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :talent_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :talent_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zipcode %>
+    <%= form.text_field :zipcode, id: :talent_zipcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sex %>
+    <%= form.text_field :sex, id: :talent_sex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthday %>
+    <%= form.date_select :birthday, id: :talent_birthday %>
+  </div>
+
+  <div class="field">
+    <%= form.label :government_id %>
+    <%= form.text_field :government_id, id: :talent_government_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :topsuit %>
+    <%= form.text_field :topsuit, id: :talent_topsuit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :waisthip %>
+    <%= form.text_field :waisthip, id: :talent_waisthip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pantlength %>
+    <%= form.text_field :pantlength, id: :talent_pantlength %>
+  </div>
+
+  <div class="field">
+    <%= form.label :eyecolor %>
+    <%= form.text_field :eyecolor, id: :talent_eyecolor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_visible_tattoo %>
+    <%= form.check_box :has_visible_tattoo, id: :talent_has_visible_tattoo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :booking_id %>
+    <%= form.text_field :booking_id, id: :talent_booking_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

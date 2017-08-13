@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/clients">Clients</a>
+    <a href="/talents">Talent</a>
+    <a href="/jobs">Jobs</a>
+    <a href="/bookings">Bookings</a>
+    <% if talent_signed_in? %>
+      <%= link_to('Talent Logout', destroy_talent_session_path, method: :delete) %>
+    <% end %>
+    <% if client_signed_in? %>
+      <%= link_to('Client Logout', destroy_client_session_path, method: :delete) %>
+    <% end %>
+  </nav>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

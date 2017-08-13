@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Talents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>First name</th>
+      <th>Middle name</th>
+      <th>Last name</th>
+      <th>Biography</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th>Address2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zipcode</th>
+      <th>Sex</th>
+      <th>Birthday</th>
+      <th>Government</th>
+      <th>Topsuit</th>
+      <th>Waisthip</th>
+      <th>Pantlength</th>
+      <th>Eyecolor</th>
+      <th>Has visible tattoo</th>
+      <th>Booking</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @talents.each do |talent| %>
+      <tr>
+        <td><%= talent.username %></td>
+        <td><%= talent.first_name %></td>
+        <td><%= talent.middle_name %></td>
+        <td><%= talent.last_name %></td>
+        <td><%= talent.biography %></td>
+        <td><%= talent.phone %></td>
+        <td><%= talent.address %></td>
+        <td><%= talent.address2 %></td>
+        <td><%= talent.city %></td>
+        <td><%= talent.state %></td>
+        <td><%= talent.zipcode %></td>
+        <td><%= talent.sex %></td>
+        <td><%= talent.birthday %></td>
+        <td><%= talent.government_id %></td>
+        <td><%= talent.topsuit %></td>
+        <td><%= talent.waisthip %></td>
+        <td><%= talent.pantlength %></td>
+        <td><%= talent.eyecolor %></td>
+        <td><%= talent.has_visible_tattoo %></td>
+        <td><%= talent.booking %></td>
+        <td><%= link_to 'Show', talent %></td>
+        <td><%= link_to 'Edit', edit_talent_path(talent) %></td>
+        <td><%= link_to 'Destroy', talent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Talent', new_talent_path %>
